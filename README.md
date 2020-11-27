@@ -59,7 +59,9 @@ $ docker-compose ps
 --------------------------------------------------------------------------------------------
 dockercomposeflask_nginx_1   /usr/sbin/nginx                  Up      0.0.0.0:80->80/tcp
 dockercomposeflask_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp
-dockercomposeflask_web_1     /runserver.sh                    Up      0.0.0.0:8000->8000/tcp
+dockercomposeflask_web_1     /runserver.sh                    Up      0.0.0.0:8000->8000/tcp  
+dockercomposeflask_web1_1     /runserver.sh                    Up      0.0.0.0:8001->8000/tcp  
+dockercomposeflask_web2_1     /runserver.sh                    Up      0.0.0.0:8002->8000/tcp  
 ```
 
 Check the web service
@@ -68,9 +70,9 @@ Check the web service
 $ curl 127.0.0.1/gunicorn
 Hello gunicorn World! I have been seen 1 times and my hostname is 09ad15ad1b51.
 $ curl 127.0.0.1/uwsgi
-Hello uwsgi World! I have been seen 2 times and my hostname is 09ad15ad1b51.
+Hello uwsgi World! I have been seen 2 times and my hostname is 09ad15ad1b52.
 $ curl 127.0.0.1/bjoern
-Hello bjoern World! I have been seen 3 times and my hostname is 09ad15ad1b51.
+Hello bjoern World! I have been seen 3 times and my hostname is 09ad15ad1b53.
 ```
 
 ### stop the service
@@ -79,6 +81,8 @@ Hello bjoern World! I have been seen 3 times and my hostname is 09ad15ad1b51.
 $ docker-compose stop
 Stopping dockercomposeflask_nginx_1 ... done
 Stopping dockercomposeflask_web_1   ... done
+Stopping dockercomposeflask_web1_1   ... done
+Stopping dockercomposeflask_web2_1   ... done
 Stopping dockercomposeflask_redis_1 ... done
 
 
