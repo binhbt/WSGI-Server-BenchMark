@@ -1,0 +1,6 @@
+Flask==1.1.2
+redis==3.5.3
+honcho==1.0.1
+gunicorn==19.7.1
+cython
+bjoern==3.1.0

@@ -1,0 +1,1 @@
+api: uwsgi --ini uwsgi.ini --socket 0.0.0.0:8000 --protocol=http -w app.app:app

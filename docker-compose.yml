@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:buster
+
+  web:
+    build:
+      context: ./web/
+    ports:
+      - "8000:8000"
+    links:
+      - redis
+  web1:
+    build:
+      context: ./web1/
+    ports:
+      - "8001:8000"
+    links:
+      - redis
+  web2:
+    build:
+      context: ./web2/
+    ports:
+      - "8002:8000"
+    links:
+      - redis
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    links:
+      - web

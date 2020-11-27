@@ -1,0 +1,1 @@
+api: gunicorn app.app:app --reload --threads 10 --workers=4 -b :8000
