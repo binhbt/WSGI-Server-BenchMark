@@ -86,8 +86,11 @@ Stopping dockercomposeflask_redis_1 ... done
 
 
 ```
-![gunicorn result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_gunicorn.png?raw=true)  
-![uwsgi result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_uwsgi.png?raw=true)  
-![bjoern result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_bjoern.png?raw=true)  
+![gunicorn result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_gunicorn.png)   
+
+![uwsgi result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_uwsgi.png)  
+
+![bjoern result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_bjoern.png)  
+
 
 ### Awsome
