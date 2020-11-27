@@ -82,7 +82,7 @@ Stopping dockercomposeflask_web_1   ... done
 Stopping dockercomposeflask_redis_1 ... done
 
 
-### Result Test  
+### Result Test  on Digital Ocean 2CPU -4G RAM  
 
 
 ```
@@ -93,4 +93,4 @@ Stopping dockercomposeflask_redis_1 ... done
 ![bjoern result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_bjoern.png)  
 
 
-### Awsome
+### Bjoern winner - Awsome
