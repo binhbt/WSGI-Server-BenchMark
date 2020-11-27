@@ -90,7 +90,7 @@ Stopping dockercomposeflask_redis_1 ... done
 
 
 ```
-### Result Test  on Digital Ocean 2CPU -4G RAM  in 2 minutes  
+### Result Test  on Digital Ocean 2CPU - 4G RAM  in 2 minutes  
 ![gunicorn result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_gunicorn.png)   
 
 ![uwsgi result](https://raw.githubusercontent.com/binhbt/WSGI-Server-BenchMark/master/bench_uwsgi.png)  
