@@ -1,12 +1,11 @@
-# docker-compose-flask
-
+# WSGI server benchmark Result test
 ```
 
-+-------------+       +------------+         +--------------+     +-----------+
-|             |       |            |         |              |     |           |
-|    nginx    +-------+  gunicorn  +---------+  flask app   +-----+   redis   |
-|             |       |            |         |              |     |           |
-+-------------+       +------------+         +--------------+     +-----------+
++-------------+       +-----------------------+           +--------------+     +-----------+
+|             |       |                       |           |              |     |           |
+|    nginx    +-------+  gunicorn/uwsgi/bjoern+-----------+  flask app   +-----+   redis   |
+|             |       |                       |           |              |     |           |
++-------------+       +-----------------------+           +--------------+     +-----------+
 
 ```
 
@@ -45,8 +44,6 @@ OpenSSL version: OpenSSL 1.0.2j  26 Sep 2016
 ### build and up
 
 ```sh
-$ git clone https://github.com/xiaopeng163/docker-compose-flask
-$ cd docker-compose-flask
 $ docker-compose build
 $ docker-compose up -d
 Starting dockercomposeflask_redis_1 ... done
@@ -68,12 +65,12 @@ dockercomposeflask_web_1     /runserver.sh                    Up      0.0.0.0:80
 Check the web service
 
 ```sh
-$ curl 127.0.0.1
-Hello Container World! I have been seen 1 times and my hostname is 09ad15ad1b51.
-$ curl 127.0.0.1
-Hello Container World! I have been seen 2 times and my hostname is 09ad15ad1b51.
-$ curl 127.0.0.1
-Hello Container World! I have been seen 3 times and my hostname is 09ad15ad1b51.
+$ curl 127.0.0.1/gunicorn
+Hello gunicorn World! I have been seen 1 times and my hostname is 09ad15ad1b51.
+$ curl 127.0.0.1/uwsgi
+Hello uwsgi World! I have been seen 2 times and my hostname is 09ad15ad1b51.
+$ curl 127.0.0.1/bjoern
+Hello bjoern World! I have been seen 3 times and my hostname is 09ad15ad1b51.
 ```
 
 ### stop the service
@@ -83,4 +80,14 @@ $ docker-compose stop
 Stopping dockercomposeflask_nginx_1 ... done
 Stopping dockercomposeflask_web_1   ... done
 Stopping dockercomposeflask_redis_1 ... done
+
+
+### Result Test  
+
+
 ```
+![gunicorn result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_gunicorn.png?raw=true)  
+![uwsgi result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_uwsgi.png?raw=true)  
+![bjoern result](https://github.com/[binhbt]/[WSGI-Server-BenchMark]/blob/[master]/bench_bjoern.png?raw=true)  
+
+### Awsome
